@@ -1,0 +1,12 @@
+[submodule "3rd_party/ohmyzsh"]
+	path = 3rd_party/ohmyzsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
+[submodule "3rd_party/powerlevel10k"]
+	path = 3rd_party/powerlevel10k
+	url = git@github.com:romkatv/powerlevel10k.git
+[submodule "3rd_party/powerlinefonts"]
+	path = 3rd_party/powerlinefonts
+	url = git@github.com:powerline/fonts.git
+[submodule "3rd_party/zsh-autosuggestions"]
+	path = 3rd_party/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
