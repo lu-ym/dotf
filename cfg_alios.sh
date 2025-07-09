@@ -17,20 +17,28 @@ fc-cache -vf
 
 # add more cmd alias
 echo "#### alias commands ####"
-echo "# some more ls aliases" >> ~/.zshrc
-echo "alias ll='ls -alF'" >> ~/.zshrc
-echo "alias la='ls -A'" >> ~/.zshrc
-echo "alias l='ls -CF'" >> ~/.zshrc
-echo "alias cl='clear'" >> ~/.zshrc
+echo "" >> ~/.bashrc
+echo "# some more ls aliases" >> ~/.bashrc
+echo "alias ll='ls -alF'" >> ~/.bashrc
+echo "alias la='ls -A'" >> ~/.bashrc
+echo "alias l='ls -CF'" >> ~/.bashrc
+echo "alias cl='clear'" >> ~/.bashrc
 # enable ssh agent
-echo "" >> ~/.zshrc
-echo "source ~/.ssh/ssh_agent.sh" >> ~/.zshrc
+echo "" >> ~/.bashrc
+echo "source ~/.ssh/ssh_agent.sh" >> ~/.bashrc
 # export temp dir
-echo "" >> ~/.zshrc
+echo "" >> ~/.bashrc
 mkdir -p ~/tmp
-echo "export TMPDIR=~/tmp" >> ~/.zshrc
-echo "export TEMP=~/tmp" >> ~/.zshrc
-echo "export TMP=~/tmp" >> ~/.zshrc
+echo "export TMPDIR=~/tmp" >> ~/.bashrc
+echo "export TEMP=~/tmp" >> ~/.bashrc
+echo "export TMP=~/tmp" >> ~/.bashrc
+# TODO: export WORKSPACE
+echo "" >> ~/.bashrc
+echo "export WORKSPACE=/mnt/nvme2/yinglu" >> ~/.bashrc
+# 
+echo "" >> ~/.bashrc
+echo "exec zsh" >> ~/.bashrc
+
 
 # 
 cp cfgs/gitconfig ~/.gitconfig
