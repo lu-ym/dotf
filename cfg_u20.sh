@@ -15,14 +15,17 @@ cp 3rd_party/nerdfonts/*/*.ttf ~/.fonts/
 cp 3rd_party/nerdfonts/*/*.otf ~/.fonts/
 fc-cache -vf
 
+# add more cmd alias
 echo "#### alias commands ####"
 echo "# some more ls aliases" > ~/.zshrc
 echo "alias ll='ls -alF'" > ~/.zshrc
 echo "alias la='ls -A'" > ~/.zshrc
 echo "alias l='ls -CF'" > ~/.zshrc
 echo "alias cl='clear'" > ~/.zshrc
+# enable ssh agent
 echo "" > ~/.zshrc
 echo "source ~/.ssh/ssh_agent.sh" > ~/.zshrc
+# export temp dir
 echo "" > ~/.zshrc
 mkdir -p ~/tmp
 echo "export TMPDIR=~/tmp" > ~/.zshrc
@@ -30,8 +33,8 @@ echo "export TEMP=~/tmp" > ~/.zshrc
 echo "export TMP=~/tmp" > ~/.zshrc
 
 # 
-cp cfgs/.gitconfig ~/
-cp -r cfgs/.ssh ~/
+cp cfgs/gitconfig ~/.gitconfig
+cp -r cfgs/ssh ~/.ssh
 # todo: need generate ssh-keygen s
 # ssh-keygen -t rsa -b 4096 "mail@mail.com"
 

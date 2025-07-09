@@ -1,0 +1,13 @@
+[user]
+	name = yingmaolu
+	email = yinglu@amd.com
+[alias]
+       	co = checkout
+       	cm = commit
+       	st = status
+       	br = branch
+	df = diff
+	ps = push
+       	hist = log –all –graph –decorate –oneline
+
+
