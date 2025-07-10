@@ -34,17 +34,17 @@ echo "export TMP=~/tmp" >> ~/.zshrc
 
 # 
 cp cfgs/gitconfig ~/.gitconfig
-cp -r cfgs/ssh ~/.ssh
-# todo: need generate ssh-keygen s
-# ssh-keygen -t rsa -b 4096 "mail@mail.com"
+# cp -r cfgs/ssh ~/.ssh
 
 echo "config zsh theme and plugins"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh --unattended
+rm install.sh
 # config at next start
-git clone --depth=1 https://github-public/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+git clone --depth=1 git@github-public:romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 # need add config 
-git clone https://github-public/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github-public/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone git@github-public:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone git@github-public:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # 
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 # plugins=(
@@ -53,3 +53,5 @@ git clone https://github-public/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUST
 #         z
 #         zsh-syntax-highlighting
 # )
+
+echo "config done"
